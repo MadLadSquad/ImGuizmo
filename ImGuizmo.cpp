@@ -728,19 +728,19 @@ namespace ImGuizmo
 
    static Context gContext;
 
-   static const vec_t directionUnary[3] = { makeVect(1.f, 0.f, 0.f), makeVect(0.f, 1.f, 0.f), makeVect(0.f, 0.f, 1.f) };
-   static const ImU32 directionColor[3] = { 0xFF0000AA, 0xFFAA0000, 0xFF00AA00 };
+   static const vec_t directionUnary[3] = { makeVect(1.f, 0.f, 0.f), makeVect(0.f, 0.f, 1.f), makeVect(0.f, 1.f, 0.f) };
+   static const ImU32 directionColor[3] = { 0xFF0000AA, 0xFF00AA00, 0xFFAA0000 };
 
    // Alpha: 100%: FF, 87%: DE, 70%: B3, 54%: 8A, 50%: 80, 38%: 61, 12%: 1F
    static const ImU32 planeColor[3] = { 0x610000AA, 0x61AA0000, 0x6100AA00 };
    static const ImU32 selectionColor = 0x8A1080FF;
    static const ImU32 inactiveColor = 0x99999999;
    static const ImU32 translationLineColor = 0xAAAAAAAA;
-   static const char* translationInfoMask[] = { "X : %5.3f", "Y : %5.3f", "Z : %5.3f",
-      "Y : %5.3f Z : %5.3f", "X : %5.3f Z : %5.3f", "X : %5.3f Y : %5.3f",
-      "X : %5.3f Y : %5.3f Z : %5.3f" };
-   static const char* scaleInfoMask[] = { "X : %5.2f", "Y : %5.2f", "Z : %5.2f", "XYZ : %5.2f" };
-   static const char* rotationInfoMask[] = { "X : %5.2f deg %5.2f rad", "Y : %5.2f deg %5.2f rad", "Z : %5.2f deg %5.2f rad", "Screen : %5.2f deg %5.2f rad" };
+   static const char* translationInfoMask[] = { "X : %5.3f", "Z : %5.3f", "Y : %5.3f",
+      "Z : %5.3f Y : %5.3f", "X : %5.3f Y : %5.3f", "X : %5.3f Z : %5.3f",
+      "X : %5.3f Z : %5.3f Y : %5.3f" };
+   static const char* scaleInfoMask[] = { "X : %5.2f", "Z : %5.2f", "Y : %5.2f", "XYZ : %5.2f" };
+   static const char* rotationInfoMask[] = { "X : %5.2f deg %5.2f rad", "Z : %5.2f deg %5.2f rad", "Y : %5.2f deg %5.2f rad", "Screen : %5.2f deg %5.2f rad" };
    static const int translationInfoIndex[] = { 0,0,0, 1,0,0, 2,0,0, 1,2,0, 0,2,0, 0,1,0, 0,1,2 };
    static const float quadMin = 0.5f;
    static const float quadMax = 0.8f;
