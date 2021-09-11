@@ -1332,6 +1332,7 @@ namespace IMGUIZMO_NAMESPACE
                //{
                //   DrawHatchedAxis(dirAxis * scaleDisplay[i]);
                //}
+            }
          }
       }
 
